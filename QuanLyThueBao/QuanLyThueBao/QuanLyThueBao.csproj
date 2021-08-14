@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF500E4A-4905-4ACC-BF45-027A743E024D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThueBao</RootNamespace>
+    <AssemblyName>QuanLyThueBao</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Call.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="ChangePw.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="dataBill.cs">
+      <DependentUpon>dataBill.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dataBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataBill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccount.Designer.cs">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlert.Designer.cs">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBocBatHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBocBatHo.Designer.cs">
+      <DependentUpon>FormBocBatHo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCard.Designer.cs">
+      <DependentUpon>FormCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePass.Designer.cs">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePassLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassLogin.Designer.cs">
+      <DependentUpon>FormChangePassLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomer.Designer.cs">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog.Designer.cs">
+      <DependentUpon>FormDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormForgotPW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForgotPW.Designer.cs">
+      <DependentUpon>FormForgotPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNetwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNetwork.Designer.cs">
+      <DependentUpon>FormNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPaymentMethod.Designer.cs">
+      <DependentUpon>FormPaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhone.Designer.cs">
+      <DependentUpon>FormPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhoneCalling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhoneCalling.Designer.cs">
+      <DependentUpon>FormPhoneCalling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhoneConnecting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhoneConnecting.Designer.cs">
+      <DependentUpon>FormPhoneConnecting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhoneIncoming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhoneIncoming.Designer.cs">
+      <DependentUpon>FormPhoneIncoming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecharge.Designer.cs">
+      <DependentUpon>FormRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegion.Designer.cs">
+      <DependentUpon>FormRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportBill.Designer.cs">
+      <DependentUpon>FormReportBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendMess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendMess.Designer.cs">
+      <DependentUpon>FormSendMess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowInfoBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowInfoBill.Designer.cs">
+      <DependentUpon>FormShowInfoBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListAllBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListAllBill.Designer.cs">
+      <DependentUpon>FormShowListAllBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListCall.Designer.cs">
+      <DependentUpon>FormShowListCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListMess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListMess.Designer.cs">
+      <DependentUpon>FormShowListMess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListNotification.Designer.cs">
+      <DependentUpon>FormShowListNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListRecharge.Designer.cs">
+      <DependentUpon>FormShowListRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowListService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowListService.Designer.cs">
+      <DependentUpon>FormShowListService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfoUser.Designer.cs">
+      <DependentUpon>FormInfoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSmartphone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSmartphone.Designer.cs">
+      <DependentUpon>FormSmartphone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryRecharge.cs" />
+    <Compile Include="ListService.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="MD5Security.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="Phone.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recharge.cs" />
+    <Compile Include="Regions.cs" />
+    <Compile Include="RJCircularPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SendMailForgotPW.cs" />
+    <Compile Include="SendMess.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Statistical.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="FormAccount.resx">
+      <DependentUpon>FormAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlert.resx">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBocBatHo.resx">
+      <DependentUpon>FormBocBatHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCard.resx">
+      <DependentUpon>FormCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePassLogin.resx">
+      <DependentUpon>FormChangePassLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomer.resx">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog.resx">
+      <DependentUpon>FormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForgotPW.resx">
+      <DependentUpon>FormForgotPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNetwork.resx">
+      <DependentUpon>FormNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPaymentMethod.resx">
+      <DependentUpon>FormPaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhone.resx">
+      <DependentUpon>FormPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhoneCalling.resx">
+      <DependentUpon>FormPhoneCalling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhoneConnecting.resx">
+      <DependentUpon>FormPhoneConnecting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhoneIncoming.resx">
+      <DependentUpon>FormPhoneIncoming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecharge.resx">
+      <DependentUpon>FormRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegion.resx">
+      <DependentUpon>FormRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportBill.resx">
+      <DependentUpon>FormReportBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendMess.resx">
+      <DependentUpon>FormSendMess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowInfoBill.resx">
+      <DependentUpon>FormShowInfoBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListAllBill.resx">
+      <DependentUpon>FormShowListAllBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListCall.resx">
+      <DependentUpon>FormShowListCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListMess.resx">
+      <DependentUpon>FormShowListMess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListNotification.resx">
+      <DependentUpon>FormShowListNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListRecharge.resx">
+      <DependentUpon>FormShowListRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowListService.resx">
+      <DependentUpon>FormShowListService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfoUser.resx">
+      <DependentUpon>FormInfoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSmartphone.resx">
+      <DependentUpon>FormSmartphone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportBill.rdlc" />
+    <EmbeddedResource Include="RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dataBill.xsc">
+      <DependentUpon>dataBill.xsd</DependentUpon>
+    </None>
+    <None Include="dataBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataBill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dataBill.xss">
+      <DependentUpon>dataBill.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="duck.mp3" />
+    <Content Include="Resources\administrator.ico" />
+    <Content Include="soundphone.mp3" />
+    <None Include="Resources\write.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\visa.png" />
+    <None Include="Resources\username.png" />
+    <None Include="Resources\top11.png" />
+    <None Include="Resources\thang.jpg" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\smartphone.jpg" />
+    <None Include="Resources\servicereged.png" />
+    <None Include="Resources\service.png" />
+    <None Include="Resources\sao.jpg" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\region.png" />
+    <None Include="Resources\phoneto.png" />
+    <None Include="Resources\phonecalling.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\paypal.png" />
+    <None Include="Resources\option.png" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\network.png" />
+    <None Include="Resources\mess.png" />
+    <None Include="Resources\mastercard.png" />
+    <None Include="Resources\logoutacc.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\logophone.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\historyrecharge.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\goi.jpg" />
+    <None Include="Resources\frontbg.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\closered.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\changepw.png" />
+    <None Include="Resources\card.png" />
+    <None Include="Resources\callcancel.png" />
+    <None Include="Resources\callaccept.png" />
+    <None Include="Resources\call.png" />
+    <None Include="Resources\bocbatho.jpg" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\backbg.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\avtdefault.png" />
+    <None Include="Resources\ask.png" />
+    <None Include="Resources\allbill.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\9.jpg" />
+    <None Include="Resources\8.jpg" />
+    <None Include="Resources\7.jpg" />
+    <None Include="Resources\6.jpg" />
+    <None Include="Resources\5.jpg" />
+    <None Include="Resources\4.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\0.jpg" />
+    <None Include="Resources\top1.png" />
+    <None Include="bin\Debug\Images\0.jpg" />
+    <None Include="bin\Debug\Images\1.jpg" />
+    <None Include="bin\Debug\Images\2.jpg" />
+    <None Include="bin\Debug\Images\3.jpg" />
+    <None Include="bin\Debug\Images\4.jpg" />
+    <None Include="bin\Debug\Images\5.jpg" />
+    <None Include="bin\Debug\Images\6.jpg" />
+    <None Include="bin\Debug\Images\7.jpg" />
+    <None Include="bin\Debug\Images\8.jpg" />
+    <None Include="bin\Debug\Images\9.jpg" />
+    <None Include="bin\Debug\Images\goi.jpg" />
+    <None Include="bin\Debug\Images\sao.jpg" />
+    <None Include="bin\Debug\Images\thang.jpg" />
+    <None Include="bin\Debug\Images\callaccept.png" />
+    <None Include="bin\Debug\Images\callcancel.png" />
+    <None Include="bin\Debug\Images\phonecalling.png" />
+    <None Include="bin\Debug\Images\phoneto.png" />
+    <None Include="bin\Debug\Images\mastercard.png" />
+    <None Include="bin\Debug\Images\paypal.png" />
+    <None Include="bin\Debug\Images\visa.png" />
+    <None Include="bin\Debug\Images\closered.png" />
+    <None Include="bin\Debug\Images\close.png" />
+    <None Include="bin\Debug\Images\bocbatho.jpg" />
+    <Content Include="Images\administrator.ico" />
+    <Content Include="Images\avtdefault.png" />
+    <Content Include="Images\backbg.png" />
+    <Content Include="Images\card.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\customer.png" />
+    <Content Include="Images\frontbg.png" />
+    <Content Include="Images\logophone.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\logoutacc.png" />
+    <Content Include="Images\network.png" />
+    <Content Include="Images\option.png" />
+    <Content Include="Images\phone.png" />
+    <Content Include="Images\region.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\service.png" />
+    <None Include="Resources\calendarWhite.png" />
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
